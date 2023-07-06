@@ -1,7 +1,7 @@
 # Core_Proje
 Asp.Net Core 7.0 ile Adım Adım Web Geliştirme
 
-Kurs Linki https://www.udemy.com/course/aspnet-core-5-ile-adim-adim-web-gelistirme/
+[Kurs Linki](https://www.udemy.com/course/aspnet-core-5-ile-adim-adim-web-gelistirme/)
 
 ## Proje Hakkında:
 Bu proje, ASP.Net Core 7.0 kullanarak Entity Framework Core ve N Tier Architecture mimarisi ile kodlanmıştır. Codefirst yaklaşımı ile SQL Server veritabanını destekleyen bir Portfolio sitesi projesidir. Default, Yazar ve Admin panellerine sahiptir.
