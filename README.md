@@ -7,7 +7,7 @@ Asp.Net Core 7.0 ile Adım Adım Web Geliştirme
 Bu proje, ASP.Net Core 7.0 kullanarak Entity Framework Core ve N Tier Architecture mimarisi ile kodlanmıştır. Codefirst yaklaşımı ile SQL Server veritabanını destekleyen bir Portfolio sitesi projesidir. Default, Yazar ve Admin panellerine sahiptir.
 
 ## Proje Aşamaları:
-- Asp.Net Core 5.0 kullanarak web uygulamalarının geliştirilmesi
+- Asp.Net Core 7.0 kullanarak web uygulamalarının geliştirilmesi
 - Entity Framework Core ile veritabanı işlemleri
 - Repository Design Pattern kullanımı
 - N Katmanlı Mimarilerin uygulanması
