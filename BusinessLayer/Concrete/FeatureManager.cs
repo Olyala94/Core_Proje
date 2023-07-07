@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class FeatureManager : IFeatureService
+    public class FeatureManager : IGenericService<Feature>
     {
         IFeatureDal _featureDal;
 
@@ -25,22 +25,22 @@ namespace BusinessLayer.Concrete
 
         public void TDelete(Feature t)
         {
-            throw new NotImplementedException();
+            _featureDal.Delete(t);  
         }
 
         public Feature TGetByID(int id)
         {
-            throw new NotImplementedException();
+            return _featureDal.GetByID(id); 
         }
 
-        public List<Feature> TGetList(Feature t)
+        public List<Feature> TGetList()
         {
-            throw new NotImplementedException();
+           return _featureDal.GetList();
         }
 
         public void TUpdate(Feature t)
         {
-            throw new NotImplementedException();
+           _featureDal.Update(t);
         }
     }
 }

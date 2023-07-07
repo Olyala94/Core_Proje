@@ -13,34 +13,34 @@ namespace BusinessLayer.Concrete
     {
         IAboutDal _aboutDal;
 
-        public AboutManager(IAboutDal aboutDal )
+        public AboutManager(IAboutDal aboutDal)
         {
             _aboutDal = aboutDal;
         }
 
         public void TAdd(About t)
         {
-            _aboutDal.Insert(t);
+            _aboutDal.Insert(t);    
         }
 
         public void TDelete(About t)
         {
-          _aboutDal.Delete(t);
+            _aboutDal.Delete(t);
         }
 
-        public About TGetByID(int id) //bu metodumuz void olmadığı için geriye dönüş tipi return yazıyoruz 
+        public About TGetByID(int id)
         {
            return _aboutDal.GetByID(id);
         }
 
-        public List<About> TGetList(About t)
+        public List<About> TGetList()
         {
-           return _aboutDal.GetList();
+          return  _aboutDal.GetList();
         }
 
         public void TUpdate(About t)
         {
-            _aboutDal.Update(t);
+           _aboutDal.Update(t);
         }
     }
 }
