@@ -8,5 +8,35 @@ namespace Core_Proje.Controllers
         {
             return PartialView();
         }
+
+        public PartialViewResult PartialFooter()
+        {
+            return PartialView();   
+        }
+
+        public PartialViewResult PartialNavbar() 
+        {
+            return PartialView();   
+        }
+
+        public PartialViewResult PartialHead()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult PartialUser()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult NavigationPartial()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult PartialScript()
+        {
+            return PartialView();
+        }
     }
 }

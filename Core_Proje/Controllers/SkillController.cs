@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Core_Proje.Controllers
@@ -10,8 +11,27 @@ namespace Core_Proje.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.v1 = "Yetenek Listesi";
+            ViewBag.v2 = "Yetenekler";
+            ViewBag.v3 = "Yetenekler Listesi";
             var values = skillManager.TGetList();
             return View(values);
+        }
+
+        [HttpGet]
+        public IActionResult AddSkill()
+        {
+            ViewBag.v1 = "Yetenek Ekleme";
+            ViewBag.v2 = "Yetenekler";
+            ViewBag.v3 = "Yetenekler Ekleme";
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddSkill(Skill skill)
+        {
+            skillManager.TAdd(skill);
+            return RedirectToAction("Index");
         }
     }
 }
