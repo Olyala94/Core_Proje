@@ -59,7 +59,6 @@ namespace Core_Proje.Controllers
         [HttpGet]
         public IActionResult EditPortfolio(int id)
         {
-
             ViewBag.v1 = "Proje Listesi";
             ViewBag.v2 = "Projeler";
             ViewBag.v3 = "Proje Düzenle";
