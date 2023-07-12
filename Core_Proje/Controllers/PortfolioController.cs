@@ -7,7 +7,7 @@ namespace Core_Proje.Controllers
 {
     public class PortfolioController : Controller
     {
-        PortfolioManager portfolioManager = new PortfolioManager(new EfPortfolioDal()); 
+        PortfolioManager portfolioManager = new PortfolioManager(new EfPortfolioDal());
 
         public IActionResult Index()
         {
@@ -20,8 +20,8 @@ namespace Core_Proje.Controllers
 
         [HttpGet]
         public IActionResult AddPortfolio()
-        {           
-            return View();  
+        {
+            return View();
         }
 
         [HttpPost]
@@ -30,7 +30,14 @@ namespace Core_Proje.Controllers
             ViewBag.v1 = "Proje Listesi";
             ViewBag.v2 = "Projeler";
             ViewBag.v3 = "Proje Ekle";
-            portfolioManager.TAdd(portfolio);
+            if (portfolio != null && portfolio.ImageUrl != "" && portfolio.Name.Length >= 5 && portfolio.Name.Length <= 100)
+            {
+                portfolioManager.TAdd(portfolio);
+            }
+            else
+            {
+                //hata mesajı ver 
+            }
             return RedirectToAction("Index");
         }
     }
