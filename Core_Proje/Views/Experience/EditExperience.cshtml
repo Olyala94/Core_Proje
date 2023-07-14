@@ -1,12 +1,10 @@
 ﻿@model EntityLayer.Concrete.Experience
 @{
     ViewData["Title"] = "EditExperience";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
-<div class="card-header bg-transparent border-0">
-    <h3 class="text-dark mb-0">Deneyim Düzenleme Sayfası</h3>
-</div>
+
 @using (Html.BeginForm("EditExperience", "Experience", FormMethod.Post))
 {
     @Html.HiddenFor(x=>x.ExperienceID)

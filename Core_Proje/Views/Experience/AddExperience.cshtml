@@ -1,30 +1,39 @@
 ﻿@model EntityLayer.Concrete.Experience
 @{
     ViewData["Title"] = "AddExperience";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
-<div class="card-header bg-transparent border-0">
-    <h3 class="text-dark mb-0">Deneyim Ekleme Sayfası</h3>
-</div>
 
 @using (Html.BeginForm("AddExperience", "Experience", FormMethod.Post))
 {
-    <br />
-    @Html.Label("Deneyim Başlığı")
-    <br />
-    @Html.TextBoxFor(x=>x.Name, new { @class = "form-control" })
-    <br />
-    <lable> Tarih </lable>
-    @Html.TextBoxFor(x=>x.Date, new { @class = "form-control" })
-    <br />
-    <lable> Resim Yolu </lable>
-    @Html.TextBoxFor(x=>x.ImageUrl, new { @class = "form-control" })
-    <br />
-    <lable> Açıklama </lable>
-    @Html.TextAreaFor(x=>x.Description, 10, 3, new { @class = "form-control" })
-    <br />
-    <button class="btn btn-outline-info"> Kaydet </button>
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">           
+                <p class="card-description"> Deneyim Ekleme Paneli </p>
+                <form class="forms-sample">
+                    <div class="form-group">
+                        <label for="exampleInputName1">Başlık</label>
+                        <input type="text" class="form-control" name="Name" placeholder="başlık adını yazın...">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">Tarih</label>
+                        <input type="text" class="form-control" name="Date" placeholder="başlagıç ve bitiş tarihi yazın...">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword4">Görsel URL</label>
+                        <input type="text" class="form-control" name="ImageUrl" placeholder="görsel yolunu yazın...">
+                    </div>                               
+                    <div class="form-group">
+                        <label for="exampleTextarea1">Açıklama</label>
+                        <textarea class="form-control" name="Description" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Kaydet</button>
+                    <button class="btn btn-dark">İptal Et</button>
+                </form>
+            </div>
+        </div>
+    </div>
 }
 
 

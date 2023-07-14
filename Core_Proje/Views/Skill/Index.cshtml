@@ -2,7 +2,8 @@
 @model List<Skill>
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+    int count = 0;
 }
 
 <div class="card-header border-0">
@@ -22,9 +23,11 @@
         <tbody>
             @foreach (var item in Model)
             {
+                count +=1;
+
                 <tr>
                     <th scope="row">
-                 @item.SkillID
+                 @count
                     </th>
                     <td>
                        @item.Title
@@ -39,12 +42,12 @@
                             </div>
                         </div>
                     </td>
-                    <td><a href="/Skill/DeleteSkill/@item.SkillID" class="btn btn-danger" onclick="return confirm('Silmek istediğinize emin misiniz?')">Sil</a></td>
-                    <td><a href="/Skill/EditSkill/@item.SkillID" class="btn btn-success">Güncelle</a></td>
+                    <td><a href="/Skill/DeleteSkill/@item.SkillID" class="btn btn-outline-danger" onclick="return confirm('Silmek istediğinize emin misiniz?')">Sil</a></td>
+                    <td><a href="/Skill/EditSkill/@item.SkillID" class="btn btn-outline-info">Güncelle</a></td>
                 </tr>
             }
         </tbody>
     </table>
 
-    <a href="/Skill/AddSkill/" class="btn btn-outline-primary">Yeni Yetenek Ekle</a>
+    <a href="/Skill/AddSkill/" class="btn btn-outline-primary">+ Yeni Yetenek Ekle</a>
 </div>
