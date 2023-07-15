@@ -22,4 +22,5 @@ Bu proje, ASP.Net Core 7.0 kullanarak Entity Framework Core ve N Tier Architectu
   <hr/>
 **Proje Görselleri (CV):** <br/>
  <br/>
-![AboutMeScreenShot](https://github.com/Olyala94/Core_Proje/assets/119108499/0bba35cf-71f1-490e-bcf1-6b50e720329a)
+![AboutMeScreenShot](https://github.com/Olyala94/Core_Proje/assets/119108499/0bba35cf-71f1-490e-bcf1-6b50e720329a)<br/>
+![AboutScreen](https://github.com/Olyala94/Core_Proje/assets/119108499/ee0fc669-a148-4806-bad2-9f69b92ff934)
