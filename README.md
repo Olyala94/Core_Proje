@@ -21,4 +21,4 @@ Bu proje, ASP.Net Core 7.0 kullanarak Entity Framework Core ve N Tier Architectu
 - Rol tabanlı yetkilendirme işlemleri
 **Proje Görselleri (CV):** <br/>
  <br/>
- ![About]()<hr/> 
+![AboutMeScreenShot](https://github.com/Olyala94/Core_Proje/assets/119108499/0bba35cf-71f1-490e-bcf1-6b50e720329a)
