@@ -19,6 +19,7 @@ Bu proje, ASP.Net Core 7.0 kullanarak Entity Framework Core ve N Tier Architectu
 - Ajax kullanımı ve sayfa yenilemesi gerektirmeyen etkileşimler
 - Kimlik doğrulama ve yetkilendirme (Identity) sisteminin entegrasyonu
 - Rol tabanlı yetkilendirme işlemleri
+  <hr/>
 **Proje Görselleri (CV):** <br/>
  <br/>
 ![AboutMeScreenShot](https://github.com/Olyala94/Core_Proje/assets/119108499/0bba35cf-71f1-490e-bcf1-6b50e720329a)
