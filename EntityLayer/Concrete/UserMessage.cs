@@ -7,20 +7,22 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    public class Message
+    public class UserMessage
     {
-        [Key]
+        [Key] 
 
         public int MessageID { get; set; }
 
-        public string? Name { get; set; }
-
-        public string? Mail { get; set; }
+        public string? Title { get; set; }
 
         public string? Content { get; set; }
 
-        public DateTime Date { get; set; }  
+        public DateTime Date { get; set; }
 
-        public bool Statuse { get; set; }   
+        public bool Statuse { get; set; }
+
+        public int UserID { get; set; }  //her birblog kategosrisi olması gerek
+
+        public User? User { get; set;}
     }
 }
