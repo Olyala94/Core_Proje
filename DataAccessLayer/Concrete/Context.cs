@@ -1,4 +1,5 @@
 ﻿using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,10 @@ namespace DataAccessLayer.Concrete
     //1. Veri tabanı Yapılandırılmamız içerisindeki  Bağlantı stringini tutan 
     //2. Veri Tabanına Yansıtılacak olan Tabloları tutan Clasımız  
     //DbSeti Kullanabilmek için DbContexti çagırıyoruz...
-    public class Context:DbContext //Veri taabanına yansıtmak istediğimiz tabloları çağıracağız "DbSet" üzerinden 
+
+   //public class Context:DbContext //Veri taabanına yansıtmak istediğimiz tabloları çağıracağız "DbSet" üzerinden 
+
+    public class Context : IdentityDbContext< WriterUser, WriterRole, int >  
     {
         //MVC de Web Config dosyasının içerisine ayarlıyorduk, ama burada Web Config Dosyası yok 
         //Onun yerine farkı baglantı string kullanılır 
@@ -49,5 +53,7 @@ namespace DataAccessLayer.Concrete
         public DbSet<UserMessage> UserMessages { get; set; }
 
         public DbSet<ToDoList> ToDoLists { get; set; }
+
+        public DbSet<Test> Test { get; set; }
     }
 }
