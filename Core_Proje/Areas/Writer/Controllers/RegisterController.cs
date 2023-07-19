@@ -19,24 +19,24 @@ namespace Core_Proje.Areas.Writer.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            return View(new UserRegisterViewModel());
         }
 
         [HttpPost]
         public async Task<IActionResult> Index(UserRegisterViewModel p)
         {
-            if (ModelState.IsValid)
+            WriterUser writerUser = new WriterUser()
             {
-                WriterUser writerUser = new WriterUser()
-                {
-                    Name = p.Name,  
-                    Surname = p.Surname,    
-                    Email = p.Email,
-                    UserName = p.UserName,
-                    ImageUrl = p.ImageUrl,  
-                };
+                Name = p.Name,
+                Surname = p.Surname,
+                Email = p.Email,
+                UserName = p.UserName,
+                ImageUrl = p.ImageUrl,
+            };
 
-                var result = await _userManager.CreateAsync(writerUser, p.Password);     
+            if (p.Password == p.ConfirmPassword)
+            {
+                var result = await _userManager.CreateAsync(writerUser, p.Password);
 
                 if (result.Succeeded)
                 {
@@ -48,7 +48,7 @@ namespace Core_Proje.Areas.Writer.Controllers
                     {
                         ModelState.AddModelError("", item.Description);
                     }
-                }
+                } 
             }
             return View();
         }
