@@ -57,5 +57,7 @@ namespace DataAccessLayer.Concrete
         public DbSet<Test> Test { get; set; }
 
         public DbSet<Announcement> Announcements { get; set; }  
+
+        public DbSet<WriterMessage> WriterMessages { get; set; }  
     }
 }
