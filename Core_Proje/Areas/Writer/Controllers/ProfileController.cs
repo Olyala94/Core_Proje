@@ -7,6 +7,7 @@ using Newtonsoft.Json.Linq;
 namespace Core_Proje.Areas.Writer.Controllers
 {
     [Area("Writer")]
+    [Route("Writer/[controller]/[action]")]  //Bu yazdığımız route "url" li takip ederek işlem yapacaksın "Apilerde" daha iyi göreceğiz bu işemi
     public class ProfileController : Controller
     {
         private readonly UserManager<WriterUser> _userManager;
@@ -47,7 +48,8 @@ namespace Core_Proje.Areas.Writer.Controllers
             var result = await _userManager.UpdateAsync(user);  
             if(result.Succeeded)
             {
-                return RedirectToAction("Index", "Default");
+                return RedirectToAction("Index", "Login"); //burada bidaha gidip WriterMessage git yada new {area="Writer"}'e git dememize gerek kalmadı çünkü yukarıda Route'i takip edecek ve Yönlendirdiğim SenderMessage actiona gidecek!!!
+               /* return RedirectToAction("Index", "Login", new { area = "Writer" });*/ //Yani şunun gibi uzun yazmammıza gerek kalmaz
             }
             return View();
         }

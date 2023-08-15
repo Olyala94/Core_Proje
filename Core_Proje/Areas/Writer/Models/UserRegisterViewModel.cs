@@ -13,6 +13,8 @@ namespace Core_Proje.Areas.Writer.Models
         [Required(ErrorMessage = "Lütfen resim url değeri girin")]
         public string ImageUrl { get; set; }
 
+        //public IFormFile Picture { get; set; }
+
         [Required(ErrorMessage ="Lütfen kullanıcı adını girin")]
         public string UserName { get; set; }
 
@@ -25,5 +27,6 @@ namespace Core_Proje.Areas.Writer.Models
 
         [Required(ErrorMessage = "Lütfen mail girin")]
         public string Email { get; set; }
+
     }
 }

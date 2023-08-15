@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Core_Proje.Areas.Writer.Controllers
 {
     [Area("Writer")]
-
+    [Route("Writer/[controller]/[action]")]  //Bu yazdığımız route "url" li takip ederek işlem yapacaksın "Apilerde" daha iyi göreceğiz bu işemi
     public class RegisterController : Controller
     {
         private readonly UserManager<WriterUser> _userManager;
@@ -19,12 +19,26 @@ namespace Core_Proje.Areas.Writer.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            //var values = await _userManager.FindByNameAsync(User.Identity.Name);
+            //UserRegisterViewModel model = new UserRegisterViewModel();
+            //model.ImageUrl = values.ImageUrl;    
             return View(new UserRegisterViewModel());
         }
 
         [HttpPost]
         public async Task<IActionResult> Index(UserRegisterViewModel p)
         {
+            //var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            //if (p.Picture != null)
+            //{
+            //    var resource = Directory.GetCurrentDirectory();
+            //    var extension = Path.GetExtension(p.Picture.FileName);
+            //    var imagename = Guid.NewGuid() + extension;
+            //    var savelocation = resource + "/wwwroot/createuserimage/" + imagename;
+            //    var stream = new FileStream(savelocation, FileMode.Create);
+            //    await p.Picture.CopyToAsync(stream);
+            //    user.ImageUrl = imagename;
+            //}
             WriterUser writerUser = new WriterUser()
             {
                 Name = p.Name,

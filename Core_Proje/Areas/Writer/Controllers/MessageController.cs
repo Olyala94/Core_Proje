@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Core_Proje.Areas.Writer.Controllers
 {
     [Area("Writer")]
-    [AllowAnonymous]
+    [Route("Writer/[controller]/[action]")]  //Bu yazdığımız route "url" li takip ederek işlem yapacaksın "Apilerde" daha iyi göreceğiz bu işemi
     public class MessageController : Controller
     {
         WriterMessageManager writerMessageManager = new WriterMessageManager(new EfWriterMessageDal());
@@ -71,7 +71,7 @@ namespace Core_Proje.Areas.Writer.Controllers
             var usernamesurname  =  c.Users.Where(x => x.Email == p.Receiver).Select(y => y.Name + " " + y.Surname).FirstOrDefault();
             p.ReceiverName = usernamesurname;
             writerMessageManager.TAdd(p);
-            return RedirectToAction("SenderMessage", "Message");
+            return RedirectToAction("SenderMessage"); //burada bidaha gidip WriterMessage git yada Defoult'a git dememize gerek kalmadı çünkü yukarıda Route'i takip edecek ve Yönlendirdiğim SenderMessage actiona gidecek!!!
         }
     }
 }
