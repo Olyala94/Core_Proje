@@ -4,10 +4,6 @@
     Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
 
-<div class="card-header bg-transparent border-0">
-    <h3 class="text-dark mb-0">Hakkımda Düzenleme Sayfa</h3>
-</div>
-
 @using (Html.BeginForm("Index", "About", FormMethod.Post))
 {
     @Html.HiddenFor(x=>x.AboutID)
@@ -22,18 +18,20 @@
     <lable> Mail </lable>
     @Html.TextBoxFor(x=>x.Mail, new { @class = "form-control" })
     <br />
+    <lable> Adress </lable>
+    @Html.TextBoxFor(x=>x.Address, new { @class = "form-control" })
+    <br />
     <lable> Telefon </lable>
     @Html.TextBoxFor(x=>x.Phone, new { @class = "form-control" })
     <br />
-    <lable> Adres </lable>
-    @Html.TextBoxFor(x=>x.Address, new { @class = "form-control" })
-    <br />
-    <lable> Görsel Yolu </lable>
+    <lable> Görsel URL </lable>
     @Html.TextBoxFor(x=>x.ImageUrl, new { @class = "form-control" })
     <br />
     <lable> Açıklama </lable>
-    @Html.TextAreaFor(x=>x.Description, 10, 2, new { @class = "form-control" })
+    @Html.TextAreaFor(x=>x.Description, 10, 3, new { @class = "form-control" })
     <br />
-    <button class="btn btn-outline-success"> Güncelle </button>
+    <button class="btn btn-outline-info"> Kaydet </button>
+    <br />
+    <button class="btn btn-dark"> İptal </button>
 }
 

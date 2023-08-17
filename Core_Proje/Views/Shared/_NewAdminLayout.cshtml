@@ -6,26 +6,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Corona Admin</title>
-    <!-- plugins:css -->
     <link rel="stylesheet" href="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/vendors/css/vendor.bundle.base.css">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <!-- endinject -->
-    <!-- Layout styles -->
     <link rel="stylesheet" href="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/css/style.css">
-    <!-- End layout styles -->
     <link rel="shortcut icon" href="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/images/favicon.png" />
 </head>
 <body>
     <div class="container-scroller">
-        <!-- partial:../../partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
             <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
                 <a class="sidebar-brand brand-logo" href="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/index.html"><img src="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/images/logo.svg" alt="logo" /></a>
@@ -33,9 +23,7 @@
             </div>
             @await Html.PartialAsync("/Views/Admin/NewSideBar.cshtml")
         </nav>
-        <!-- partial -->
         <div class="container-fluid page-body-wrapper">
-            <!-- partial:../../partials/_navbar.html -->
             <nav class="navbar p-0 fixed-top d-flex flex-row">
                 <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
                     <a class="navbar-brand brand-logo-mini" href="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/index.html"><img src="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/images/logo-mini.svg" alt="logo" /></a>
@@ -231,15 +219,6 @@
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">
-                    <div class="page-header">
-                        <h3 class="page-title">  </h3>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#">@ViewBag.v2</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">@ViewBag.v3</li>
-                            </ol>
-                        </nav>
-                    </div>
                    @RenderBody()
                 </div>
                 <!-- content-wrapper ends -->
@@ -256,19 +235,26 @@
         </div>
         <!-- page-body-wrapper ends -->
     </div>
-    <!-- container-scroller -->
     <!-- plugins:js -->
-    @*<script src="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/vendors/js/vendor.bundle.base.js"></script>*@
-    <!-- endinject -->
-    <!-- Plugin js for this page -->
-    <!-- End plugin js for this page -->
-    <!-- inject:js -->
+    <script src="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinjec~/corona-free-dark-bootstrap-admin-template-1.0.0/template/t -->
+    <!-- Plugin j~/corona-free-dark-bootstrap-admin-template-1.0.0/template/s for this page -->
+    <script src="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/vendors/chart.js/Chart.min.js"></script>
+    <script src="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/vendors/jvectormap/jquery-jvectormap.min.js"></script>
+    <script src="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/vendors/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/vendors/owl-carousel-2/owl.carousel.min.js"></script>
+    <!-- End plug~/corona-free-dark-bootstrap-admin-template-1.0.0/template/in js for this page -->
+    <!-- inject:j~/corona-free-dark-bootstrap-admin-template-1.0.0/template/s -->
     <script src="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/js/off-canvas.js"></script>
     <script src="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/js/hoverable-collapse.js"></script>
     <script src="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/js/misc.js"></script>
     <script src="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/js/settings.js"></script>
     <script src="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/js/todolist.js"></script>
     <!-- endinject -->
+    <!-- Custom js for this page -->
+    <script src="~/corona-free-dark-bootstrap-admin-template-1.0.0/template/assets/js/dashboard.js"></script>
+    <!-- End custom js for this page -->
     <!-- Custom js for this page -->
     <!-- End custom js for this page -->
 </body>
