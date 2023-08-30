@@ -2,14 +2,16 @@
 
 @{
     ViewData["Title"] = "EditService";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
-
-<div class="card-header bg-transparent border-0">
-    <h3 class="text-dark mb-0">Hizmet Düzenleme Sayfası</h3>
-</div>
 @using (Html.BeginForm("EditService", "Service", FormMethod.Post))
 {
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-description"> Hizmet Düzenleme Sayfası </p>
+                <form class="forms-sample">
+    <br />
     @Html.HiddenFor(x=>x.ServiceID)
     <br />
     @Html.Label("Hizmet Başlığı")
@@ -21,5 +23,9 @@
     <br />
     
     <button class="btn btn-outline-info"> Güncelle </button>
+                </form>
+            </div>
+        </div>
+    </div>
 }
 

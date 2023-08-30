@@ -1,20 +1,21 @@
 ﻿@model EntityLayer.Concrete.Portfolio
 @{
     ViewData["Title"] = "AddPortfolio";
-    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
 }
-
-<div class="card-header bg-transparent border-0">
-    <h3 class="text-dark mb-0">Proje Ekleme Sayfası</h3>
-</div>
 
 @using (Html.BeginForm("AddPortfolio", "Portfolio", FormMethod.Post))
 {
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">           
+                <p class="card-description">Yeni Proje Ekleme Paneli </p>
+                <form class="forms-sample">
     <br />
     @Html.Label("Proje Başlığı")
     <br />
     @Html.TextBoxFor(x=>x.Name, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x=>x.Name);
+    @Html.ValidationMessageFor(x=>x.Name)
     <br />
     <lable> Görsel 1 </lable>
     @Html.TextBoxFor(x=>x.ImageUrl, new { @class = "form-control" })
@@ -26,7 +27,7 @@
     <br />
     <lable> Proje URL </lable>
     @Html.TextBoxFor(x=>x.ProjectUrl, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x=>x.ProjectUrl);
+    @Html.ValidationMessageFor(x=>x.ProjectUrl)
     <br />
      <lable> Fiyat </lable>
     @Html.TextBoxFor(x=>x.Price, new { @class = "form-control" })
@@ -38,4 +39,8 @@
     <br />
 
     <button class="btn btn-outline-info"> Kaydet </button>
+                </form>
+            </div>
+        </div>
+    </div>
 }
