@@ -35,7 +35,7 @@ namespace BusinessLayer.Concrete
 
         public void TDelete(WriterMessage t)
         {
-            throw new NotImplementedException();
+            _writerMessageDal.Delete(t);
         }
 
         public WriterMessage TGetByID(int id)
@@ -45,7 +45,7 @@ namespace BusinessLayer.Concrete
 
         public List<WriterMessage> TGetList()
         {
-            throw new NotImplementedException();
+            return _writerMessageDal.GetList();
         }
 
         public List<WriterMessage> TGetListByFilter()
@@ -55,7 +55,7 @@ namespace BusinessLayer.Concrete
 
         public void TUpdate(WriterMessage t)
         {
-            throw new NotImplementedException();
+            _writerMessageDal.Update(t);
         }
     }
 }

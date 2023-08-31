@@ -1,0 +1,41 @@
+﻿@model EntityLayer.Concrete.WriterMessage
+
+@{
+    ViewData["Title"] = "AdminMessageDetails";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <p class="card-description"> Mesaj Detay Sayfası </p>
+            <form class="forms-sample">
+                <br />
+                @Html.HiddenFor(x=>x.WriterMessageID)
+                <br />         
+                @Html.Label("Başlık")
+                <br />
+                @Html.TextBoxFor(x=>x.Subject, new { @class = "form-control" })
+                <br />
+                @Html.Label("Gönderen")
+                <br />
+                @Html.TextBoxFor(x=>x.SenderName, new { @class = "form-control" })
+                <br />
+                @Html.Label("Alıcı")
+                <br />
+                @Html.TextBoxFor(x=>x.ReceiverName, new { @class = "form-control" })
+                <br />
+                <lable> Tarih </lable>
+                <br />
+                @Html.TextBoxFor(x=>x.Date, new { @class = "form-control" })
+                <br />
+                <lable> Mesaj </lable>
+                <br />
+                @Html.TextBoxFor(x=>x.MessageContent, new { @class = "form-control" })
+                <br />          
+            </form>
+        </div>
+    </div>
+</div>
+
+

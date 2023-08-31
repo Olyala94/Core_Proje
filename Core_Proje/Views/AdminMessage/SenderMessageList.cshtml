@@ -1,0 +1,50 @@
+﻿@using EntityLayer.Concrete
+@model List<WriterMessage>
+@{
+    ViewData["Title"] = "SenderMessageList";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+    int count = 0;
+}
+
+<div class="row">
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Yazar Admin Giden Kutusu</h4>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th> # </th>
+                                <th> Gönderen </th>
+                                <th> Konu </th>
+                                <th> Tarih </th>
+                                <th> Sil </th>
+                                <th> Mesajı Gör </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                count += 1;
+                                <tr>
+                                    <td> @count </td>
+                                    <td> @item.ReceiverName </td>
+                                    <td> @item.Subject </td>
+                                    <td> @item.Date </td>
+                                    <td> <a href="/AdminMessage/AdminMessageDelete/@item.WriterMessageID" onclick="return confirm('Silmek istediğinize emin misiniz?')" class="btn btn-outline-danger">Sil</a></td>
+                                    <td> <a href="/AdminMessage/AdminMessageDetails/@item.WriterMessageID" class="btn btn-outline-success">Mesajı Gör</a></td>
+                                </tr>
+                            }
+                            
+                        </tbody>
+                    </table>
+                    <br />
+                    <a asp-action="ReceiverMessageList" class="btn btn-primary mr-2"> Admin Gelen Mesajlar </a>
+                    <a asp-action="SenderMessageList" class="btn btn-warning mr-2"> Admin Giden Mesajlar </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
